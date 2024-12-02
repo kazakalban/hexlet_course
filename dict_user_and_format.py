@@ -10,7 +10,10 @@ format_user(phil)
 # Phil, 25"""
 
 
-def make_user(user_name, user_age) -> dict:
+def make_user(user_name: str, user_age: int) -> dict[str, str | int]:
+    """
+    Создает словарь с данными пользователя. 
+    """
     user_data = {
         'name': user_name,
         'age': user_age
@@ -19,8 +22,10 @@ def make_user(user_name, user_age) -> dict:
 
 
 def format_user(user_data: dict) -> str:
-    result = user_data['name'] + ',' + str(user_data['age'])
-    return str(result)
+    """
+    Форматирует данные пользоваталя в строку
+    """
+    return f"{user_data['name']}, {user_data['age']}"
 
 
 phil = make_user('Phil', 25)

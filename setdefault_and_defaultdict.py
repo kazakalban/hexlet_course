@@ -7,6 +7,7 @@
     по которым встречается этот элемент
 """
 
+
 from collections import defaultdict
 
 
@@ -18,13 +19,6 @@ def collect_indexes(items):
         index += 1
     return final_dict
 
-    
-
-
-
-
-#collect_indexes('lol')
-
 
 def test_collect_indexes():
     assert not collect_indexes([])
@@ -32,5 +26,6 @@ def test_collect_indexes():
     assert collect_indexes([1, 2]) == {1: [0], 2: [1]}
     assert collect_indexes('lol') == {'l': [0, 2], 'o': [1]}
     assert collect_indexes('coco') == {'c': [0, 2], 'o': [1, 3]}
+
 
 test_collect_indexes()
